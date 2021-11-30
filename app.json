@@ -1,0 +1,27 @@
+{
+  "name": "TransloadBot",
+  "description": "Telegram's best Open Source Transloadbot from https://rapidleech.hashhackers.com/",
+  "success_url": "https://telegram.dog/nahoooabott",
+  "repository": "https://github.com/madibag/Transload_bot",
+  "env": {
+    "WEBHOOK": {
+      "description": "Setting this to ANYTHING will enable webhooks when in env mode",
+      "value": "ANYTHING"
+    },
+    "TG_BOT_TOKEN": {
+      "description": "Your bot token, as a string.",
+      "value": ""
+    }
+  },
+  "addons": [
+  ],
+  "buildpacks": [{
+    "url": "heroku/python"
+  }],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
