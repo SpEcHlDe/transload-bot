@@ -1,0 +1,31 @@
+{
+  "name": "TransloadBot",
+  "description": "Telegram's best Open Source Transloadbot from https://rapidleech.hashhackers.com/",
+  "success_url": "https://telegram.dog/zisizmybot",
+  "repository": "https://github.com/SpEcHlDe/Transloader-bot",
+  "env": {
+    "WEBHOOK": {
+      "description": "Setting this to ANYTHING will enable webhooks when in env mode",
+      "value": "ANYTHING"
+    },
+    "TG_BOT_TOKEN": {
+      "description": "Your bot token, as a string.",
+      "value": ""
+    },
+    "HOST_URL": {
+      "description": "The transloader website, if you don't have your own website, make your own from https://github.com/x-gorn/bakaleech-v2 or leave it as it."
+      "value": "https://s1.rapidleech.gq"
+    }
+  },
+  "addons": [
+  ],
+  "buildpacks": [{
+    "url": "heroku/python"
+  }],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
